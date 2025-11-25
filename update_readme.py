@@ -127,44 +127,57 @@ DATA = [
 ]
 
 # ==========================================
-# 2. Notebook 解析逻辑
+# 2. 智能 Notebook 解析 (Strict Mode)
 # ==========================================
 def analyze_notebook(filepath):
     if not os.path.exists(filepath):
         return "⬜", "⬜"
+
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
+        
         cells = data.get("cells", [])
-        
-        # Check Code
         code_status = "⬜"
-        if len(cells) > 1 and cells[1]['cell_type'] == 'code':
-            source = "".join(cells[1]['source']).strip()
-            if len(source) > 50 and "pass" not in source:
-                code_status = "✅"
-
-        # Check Takeaways
         note_status = "⬜"
-        if len(cells) > 2 and cells[2]['cell_type'] == 'markdown':
-            source = "".join(cells[2]['source'])
-            if "[x]" in source:
-                note_status = "✅"
-            elif code_status == "✅":
-                note_status = "⏳"
+
+        for cell in cells:
+            source_lines = cell.get('source', [])
+            source_text = "".join(source_lines).strip()
+            
+            # 1. 找代码 (Code)
+            # 逻辑：长度 > 40 且不包含 pass。
+            if cell['cell_type'] == 'code':
+                if len(source_text) > 40 and "pass" not in source_text:
+                    code_status = "✅"
+            
+            # 2. 找笔记 (Takeaways)
+            # 逻辑：严格检测 [x] 或 [X]。
+            # 我们删除了字数检测，因为默认模版太长了会被误判。
+            if cell['cell_type'] == 'markdown':
+                if "[x]" in source_text or "[X]" in source_text:
+                    note_status = "✅"
         
+        # 逻辑：有代码没笔记 -> 沙漏
+        if code_status == "✅" and note_status == "⬜":
+            note_status = "⏳"
+            
         return code_status, note_status
+        
     except Exception:
         return "⚠️", "⚠️"
 
 # ==========================================
 # 3. 生成 Markdown 内容
 # ==========================================
-header = """# LeetCode 75 - Python Notebooks 
+header = """# LeetCode 75 - Python Notebooks
 
 This repository contains my solutions and study notes for the LeetCode 75 study plan. 
+Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detailed thought processes, complexity analysis, and diagrams.
 
-Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detailed thought processes, complexity analysis, and diagrams. 
+## Tech Stack
+- Language: Python 3
+- Concepts: Data Structures & Algorithms
 
 ## Study Methodology: Spaced Repetition
 
@@ -173,23 +186,20 @@ Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detai
 
 ---
 
-##Progress Tracker
+## Progress Tracker
 
-| Category | Problem | Diff |  Code |  Takeaways |
+| Category | Problem | Diff | Code | Takeaways |
 | :--- | :--- | :--- | :---: | :---: |
 """
- ## Tech Stack  - Language: Python 3  - Concepts: Data Structures & Algorithms  ---
- *Created by Claire*  
+
+footer = """
+---
+*Created by Claire*
+"""
+
 content = header
 total_solved = 0
-
-# 映射表：Medium -> Med, Easy -> Easy, Hard -> Hard
-# 这样不仅看着整齐，字符长度也比较统一
-DIFF_MAP = {
-    "Easy": "Easy",
-    "Medium": "Med",
-    "Hard": "Hard"
-}
+DIFF_MAP = {"Easy": "Easy", "Medium": "Med", "Hard": "Hard"}
 
 for category, folder, problems in DATA:
     is_first = True
@@ -209,13 +219,13 @@ for category, folder, problems in DATA:
         link = f"[{display_name}](./{folder}/{prob_file}.ipynb)"
         cat_col = f"**{category}**" if is_first else ""
         is_first = False
-        
-        # ⚡️ 核心修改：使用缩写
         short_diff = DIFF_MAP.get(diff, diff)
         
         content += f"| {cat_col} | {link} | {short_diff} | {c_stat} | {n_stat} |\n"
 
+content += footer
+
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(content)
 
-print(f"✅ README updated! Difficulty abbreviated to 'Med'. Total Solved: {total_solved}")
+print(f"✅ Strict Mode Update! Solved: {total_solved}")
