@@ -146,14 +146,11 @@ def analyze_notebook(filepath):
             source_text = "".join(source_lines).strip()
             
             # 1. 找代码 (Code)
-            # 逻辑：长度 > 40 且不包含 pass。
             if cell['cell_type'] == 'code':
                 if len(source_text) > 40 and "pass" not in source_text:
                     code_status = "✅"
             
             # 2. 找笔记 (Takeaways)
-            # 逻辑：严格检测 [x] 或 [X]。
-            # 我们删除了字数检测，因为默认模版太长了会被误判。
             if cell['cell_type'] == 'markdown':
                 if "[x]" in source_text or "[X]" in source_text:
                     note_status = "✅"
@@ -170,9 +167,12 @@ def analyze_notebook(filepath):
 # ==========================================
 # 3. 生成 Markdown 内容
 # ==========================================
+
+# 你的修改在这里：增加了空行，这样 Markdown 渲染出来段落感更强，完全正确。
 header = """# LeetCode 75 - Python Notebooks
 
 This repository contains my solutions and study notes for the LeetCode 75 study plan. 
+
 Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detailed thought processes, complexity analysis, and diagrams.
 
 ## Tech Stack

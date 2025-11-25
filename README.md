@@ -1,6 +1,7 @@
 # LeetCode 75 - Python Notebooks
 
 This repository contains my solutions and study notes for the LeetCode 75 study plan. 
+
 Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detailed thought processes, complexity analysis, and diagrams.
 
 ## Tech Stack
