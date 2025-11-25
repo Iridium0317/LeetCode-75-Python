@@ -2,9 +2,8 @@ import os
 import json
 
 # ==========================================
-# 1. LeetCode 75 数据全集 (顺序 + 难度)
+# 1. LeetCode 75 数据全集
 # ==========================================
-# 格式: (Category Name, Folder Name, [(Filename_Without_Extension, Difficulty), ...])
 DATA = [
     ("Array / String", "01_Array_String", [
         ("1768_Merge_Strings_Alternately", "Easy"), 
@@ -131,77 +130,74 @@ DATA = [
 # 2. Notebook 解析逻辑
 # ==========================================
 def analyze_notebook(filepath):
-    """
-    Returns: (code_status, note_status)
-    """
     if not os.path.exists(filepath):
-        return "⬜", "⬜" # 文件不存在
-
+        return "⬜", "⬜"
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            
         cells = data.get("cells", [])
         
-        # 1. Check Code (Assuming 2nd cell, index 1)
+        # Check Code
         code_status = "⬜"
         if len(cells) > 1 and cells[1]['cell_type'] == 'code':
             source = "".join(cells[1]['source']).strip()
-            # 简单判断: 长度 > 50 且不只是 "pass"
             if len(source) > 50 and "pass" not in source:
                 code_status = "✅"
 
-        # 2. Check Takeaways (Assuming 3rd cell, index 2)
+        # Check Takeaways
         note_status = "⬜"
         if len(cells) > 2 and cells[2]['cell_type'] == 'markdown':
             source = "".join(cells[2]['source'])
-            # 检测是否勾选了 [x] 或者有显著内容
             if "[x]" in source:
                 note_status = "✅"
             elif code_status == "✅":
-                # 有代码但没勾选笔记 -> 待定
                 note_status = "⏳"
         
         return code_status, note_status
-        
     except Exception:
         return "⚠️", "⚠️"
 
 # ==========================================
 # 3. 生成 Markdown 内容
 # ==========================================
-header = """# LeetCode 75 - Python Notebooks 📓
+header = """# LeetCode 75 - Python Notebooks 
 
-This repository contains my solutions for the LeetCode 75 study plan. 
-I use a **"Solve-then-Review"** methodology using Jupyter Notebooks.
+This repository contains my solutions and study notes for the LeetCode 75 study plan. 
 
-## 🧠 Study Methodology: Spaced Repetition
+Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detailed thought processes, complexity analysis, and diagrams. 
+
+## Study Methodology: Spaced Repetition
 
 - **Day 1 (Implementation)**: Focus on solving the problem and passing test cases.
 - **Day 2 (Retrospection)**: Revisit the solution after 24 hours to write **Takeaways**, analyze complexity, and optimize code.
 
 ---
 
-## 📊 Progress Tracker
+##Progress Tracker
 
-| Category | Problem | Diff | 💻 Code | 📝 Takeaways |
+| Category | Problem | Diff |  Code |  Takeaways |
 | :--- | :--- | :--- | :---: | :---: |
 """
-
+ ## Tech Stack  - Language: Python 3  - Concepts: Data Structures & Algorithms  ---
+ *Created by Claire*  
 content = header
 total_solved = 0
+
+# 映射表：Medium -> Med, Easy -> Easy, Hard -> Hard
+# 这样不仅看着整齐，字符长度也比较统一
+DIFF_MAP = {
+    "Easy": "Easy",
+    "Medium": "Med",
+    "Hard": "Hard"
+}
 
 for category, folder, problems in DATA:
     is_first = True
     for prob_file, diff in problems:
-        # 构建文件路径
         filepath = os.path.join(folder, f"{prob_file}.ipynb")
-        
-        # 获取状态
         c_stat, n_stat = analyze_notebook(filepath)
         if c_stat == "✅": total_solved += 1
         
-        # 格式化显示名称 (1768_Merge... -> 1768. Merge...)
         try:
             parts = prob_file.split("_")
             p_id = parts[0]
@@ -210,17 +206,16 @@ for category, folder, problems in DATA:
         except:
             display_name = prob_file
             
-        # 链接
         link = f"[{display_name}](./{folder}/{prob_file}.ipynb)"
-        
-        # 分类栏只显示一次
         cat_col = f"**{category}**" if is_first else ""
         is_first = False
         
-        content += f"| {cat_col} | {link} | {diff} | {c_stat} | {n_stat} |\n"
+        # ⚡️ 核心修改：使用缩写
+        short_diff = DIFF_MAP.get(diff, diff)
+        
+        content += f"| {cat_col} | {link} | {short_diff} | {c_stat} | {n_stat} |\n"
 
-# 写入
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(content)
 
-print(f"✅ README updated with Difficulty & Official Order! Total Solved: {total_solved}")
+print(f"✅ README updated! Difficulty abbreviated to 'Med'. Total Solved: {total_solved}")
