@@ -20,22 +20,22 @@ Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detai
 | Category | Problem | Diff | Code | Takeaways |
 | :--- | :--- | :--- | :---: | :---: |
 | **Array / String** | [**1768.** Merge Strings Alternately](./01_Array_String/1768_Merge_Strings_Alternately.ipynb) | Easy | ✅ | ⏳ |
-|  | [**1071.** GCD of Strings](./01_Array_String/1071_GCD_of_Strings.ipynb) | Easy | ⬜ | ⬜ |
+|  | [**1071.** GCD of Strings](./01_Array_String/1071_GCD_of_Strings.ipynb) | Easy | ✅ | ⬜ |
 |  | [**1431.** Kids With Candies](./01_Array_String/1431_Kids_With_Candies.ipynb) | Easy | ✅ | ⏳ |
-|  | [**605.** Can Place Flowers](./01_Array_String/605_Can_Place_Flowers.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**345.** Reverse Vowels of a String](./01_Array_String/345_Reverse_Vowels_of_a_String.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**151.** Reverse Words in a String](./01_Array_String/151_Reverse_Words_in_a_String.ipynb) | Med | ⬜ | ⬜ |
-|  | [**238.** Product of Array Except Self](./01_Array_String/238_Product_of_Array_Except_Self.ipynb) | Med | ⬜ | ⬜ |
-|  | [**334.** Increasing Triplet Subsequence](./01_Array_String/334_Increasing_Triplet_Subsequence.ipynb) | Med | ⬜ | ⬜ |
-|  | [**443.** String Compression](./01_Array_String/443_String_Compression.ipynb) | Med | ⬜ | ⬜ |
-| **Two Pointers** | [**283.** Move Zeroes](./02_Two_Pointers/283_Move_Zeroes.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**392.** Is Subsequence](./02_Two_Pointers/392_Is_Subsequence.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**11.** Container With Most Water](./02_Two_Pointers/11_Container_With_Most_Water.ipynb) | Med | ⬜ | ⬜ |
-|  | [**1679.** Max Number of K Sum Pairs](./02_Two_Pointers/1679_Max_Number_of_K_Sum_Pairs.ipynb) | Med | ⬜ | ⬜ |
-| **Sliding Window** | [**643.** Maximum Average Subarray I](./03_Sliding_Window/643_Maximum_Average_Subarray_I.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**1456.** Max Vowels in Substring](./03_Sliding_Window/1456_Max_Vowels_in_Substring.ipynb) | Med | ⬜ | ⬜ |
-|  | [**1004.** Max Consecutive Ones III](./03_Sliding_Window/1004_Max_Consecutive_Ones_III.ipynb) | Med | ⬜ | ⬜ |
-|  | [**1493.** Longest Subarray of 1s After Deleting One](./03_Sliding_Window/1493_Longest_Subarray_of_1s_After_Deleting_One.ipynb) | Med | ⬜ | ⬜ |
+|  | [**605.** Can Place Flowers](./01_Array_String/605_Can_Place_Flowers.ipynb) | Easy | ✅ | ⬜ |
+|  | [**345.** Reverse Vowels of a String](./01_Array_String/345_Reverse_Vowels_of_a_String.ipynb) | Easy | ✅ | ⬜ |
+|  | [**151.** Reverse Words in a String](./01_Array_String/151_Reverse_Words_in_a_String.ipynb) | Med | ✅ | ⬜ |
+|  | [**238.** Product of Array Except Self](./01_Array_String/238_Product_of_Array_Except_Self.ipynb) | Med | ✅ | ⬜ |
+|  | [**334.** Increasing Triplet Subsequence](./01_Array_String/334_Increasing_Triplet_Subsequence.ipynb) | Med | ✅ | ⬜ |
+|  | [**443.** String Compression](./01_Array_String/443_String_Compression.ipynb) | Med | ✅ | ⬜ |
+| **Two Pointers** | [**283.** Move Zeroes](./02_Two_Pointers/283_Move_Zeroes.ipynb) | Easy | ✅ | ⬜ |
+|  | [**392.** Is Subsequence](./02_Two_Pointers/392_Is_Subsequence.ipynb) | Easy | ✅ | ⬜ |
+|  | [**11.** Container With Most Water](./02_Two_Pointers/11_Container_With_Most_Water.ipynb) | Med | ✅ | ⬜ |
+|  | [**1679.** Max Number of K Sum Pairs](./02_Two_Pointers/1679_Max_Number_of_K_Sum_Pairs.ipynb) | Med | ✅ | ⬜ |
+| **Sliding Window** | [**643.** Maximum Average Subarray I](./03_Sliding_Window/643_Maximum_Average_Subarray_I.ipynb) | Easy | ✅ | ⬜ |
+|  | [**1456.** Max Vowels in Substring](./03_Sliding_Window/1456_Max_Vowels_in_Substring.ipynb) | Med | ✅ | ⬜ |
+|  | [**1004.** Max Consecutive Ones III](./03_Sliding_Window/1004_Max_Consecutive_Ones_III.ipynb) | Med | ✅ | ⬜ |
+|  | [**1493.** Longest Subarray of 1s After Deleting One](./03_Sliding_Window/1493_Longest_Subarray_of_1s_After_Deleting_One.ipynb) | Med | ✅ | ⬜ |
 | **Prefix Sum** | [**1732.** Find the Highest Altitude](./04_Prefix_Sum/1732_Find_the_Highest_Altitude.ipynb) | Easy | ⬜ | ⬜ |
 |  | [**724.** Find Pivot Index](./04_Prefix_Sum/724_Find_Pivot_Index.ipynb) | Easy | ⬜ | ⬜ |
 | **Hash Map / Set** | [**2215.** Find the Difference of Two Arrays](./05_Hash_Map_Set/2215_Find_the_Difference_of_Two_Arrays.ipynb) | Easy | ⬜ | ⬜ |
