@@ -36,12 +36,12 @@ Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detai
 |  | [**1456.** Max Vowels in Substring](./03_Sliding_Window/1456_Max_Vowels_in_Substring.ipynb) | Med | ✅ | ⬜ |
 |  | [**1004.** Max Consecutive Ones III](./03_Sliding_Window/1004_Max_Consecutive_Ones_III.ipynb) | Med | ✅ | ⬜ |
 |  | [**1493.** Longest Subarray of 1s After Deleting One](./03_Sliding_Window/1493_Longest_Subarray_of_1s_After_Deleting_One.ipynb) | Med | ✅ | ⬜ |
-| **Prefix Sum** | [**1732.** Find the Highest Altitude](./04_Prefix_Sum/1732_Find_the_Highest_Altitude.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**724.** Find Pivot Index](./04_Prefix_Sum/724_Find_Pivot_Index.ipynb) | Easy | ⬜ | ⬜ |
-| **Hash Map / Set** | [**2215.** Find the Difference of Two Arrays](./05_Hash_Map_Set/2215_Find_the_Difference_of_Two_Arrays.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**1207.** Unique Number of Occurrences](./05_Hash_Map_Set/1207_Unique_Number_of_Occurrences.ipynb) | Easy | ⬜ | ⬜ |
-|  | [**1657.** Determine if Two Strings Are Close](./05_Hash_Map_Set/1657_Determine_if_Two_Strings_Are_Close.ipynb) | Med | ⬜ | ⬜ |
-|  | [**2352.** Equal Row and Column Pairs](./05_Hash_Map_Set/2352_Equal_Row_and_Column_Pairs.ipynb) | Med | ⬜ | ⬜ |
+| **Prefix Sum** | [**1732.** Find the Highest Altitude](./04_Prefix_Sum/1732_Find_the_Highest_Altitude.ipynb) | Easy | ✅ | ⬜ |
+|  | [**724.** Find Pivot Index](./04_Prefix_Sum/724_Find_Pivot_Index.ipynb) | Easy | ✅ | ⬜ |
+| **Hash Map / Set** | [**2215.** Find the Difference of Two Arrays](./05_Hash_Map_Set/2215_Find_the_Difference_of_Two_Arrays.ipynb) | Easy | ✅ | ⬜ |
+|  | [**1207.** Unique Number of Occurrences](./05_Hash_Map_Set/1207_Unique_Number_of_Occurrences.ipynb) | Easy | ✅ | ⬜ |
+|  | [**1657.** Determine if Two Strings Are Close](./05_Hash_Map_Set/1657_Determine_if_Two_Strings_Are_Close.ipynb) | Med | ✅ | ⬜ |
+|  | [**2352.** Equal Row and Column Pairs](./05_Hash_Map_Set/2352_Equal_Row_and_Column_Pairs.ipynb) | Med | ✅ | ⬜ |
 | **Stack** | [**2390.** Removing Stars From a String](./06_Stack/2390_Removing_Stars_From_a_String.ipynb) | Med | ⬜ | ⬜ |
 |  | [**735.** Asteroid Collision](./06_Stack/735_Asteroid_Collision.ipynb) | Med | ⬜ | ⬜ |
 |  | [**394.** Decode String](./06_Stack/394_Decode_String.ipynb) | Med | ⬜ | ⬜ |
