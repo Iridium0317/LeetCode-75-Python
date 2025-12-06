@@ -45,7 +45,7 @@ Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detai
 | **Stack** | [**2390.** Removing Stars From a String](./06_Stack/2390_Removing_Stars_From_a_String.ipynb) | Med | ✅ | ⬜ |
 |  | [**735.** Asteroid Collision](./06_Stack/735_Asteroid_Collision.ipynb) | Med | ✅ | ⬜ |
 |  | [**394.** Decode String](./06_Stack/394_Decode_String.ipynb) | Med | ✅ | ⬜ |
-| **Queue** | [**933.** Number of Recent Calls](./07_Queue/933_Number_of_Recent_Calls.ipynb) | Easy | ⬜ | ⬜ |
+| **Queue** | [**933.** Number of Recent Calls](./07_Queue/933_Number_of_Recent_Calls.ipynb) | Easy | ✅ | ⬜ |
 |  | [**649.** Dota2 Senate](./07_Queue/649_Dota2_Senate.ipynb) | Med | ⬜ | ⬜ |
 | **Linked List** | [**2095.** Delete the Middle Node of a Linked List](./08_Linked_List/2095_Delete_the_Middle_Node_of_a_Linked_List.ipynb) | Med | ⬜ | ⬜ |
 |  | [**328.** Odd Even Linked List](./08_Linked_List/328_Odd_Even_Linked_List.ipynb) | Med | ⬜ | ⬜ |
