@@ -42,9 +42,9 @@ Each problem is solved in its own **Jupyter Notebook (.ipynb)** to include detai
 |  | [**1207.** Unique Number of Occurrences](./05_Hash_Map_Set/1207_Unique_Number_of_Occurrences.ipynb) | Easy | ✅ | ⬜ |
 |  | [**1657.** Determine if Two Strings Are Close](./05_Hash_Map_Set/1657_Determine_if_Two_Strings_Are_Close.ipynb) | Med | ✅ | ⬜ |
 |  | [**2352.** Equal Row and Column Pairs](./05_Hash_Map_Set/2352_Equal_Row_and_Column_Pairs.ipynb) | Med | ✅ | ⬜ |
-| **Stack** | [**2390.** Removing Stars From a String](./06_Stack/2390_Removing_Stars_From_a_String.ipynb) | Med | ⬜ | ⬜ |
-|  | [**735.** Asteroid Collision](./06_Stack/735_Asteroid_Collision.ipynb) | Med | ⬜ | ⬜ |
-|  | [**394.** Decode String](./06_Stack/394_Decode_String.ipynb) | Med | ⬜ | ⬜ |
+| **Stack** | [**2390.** Removing Stars From a String](./06_Stack/2390_Removing_Stars_From_a_String.ipynb) | Med | ✅ | ⬜ |
+|  | [**735.** Asteroid Collision](./06_Stack/735_Asteroid_Collision.ipynb) | Med | ✅ | ⬜ |
+|  | [**394.** Decode String](./06_Stack/394_Decode_String.ipynb) | Med | ✅ | ⬜ |
 | **Queue** | [**933.** Number of Recent Calls](./07_Queue/933_Number_of_Recent_Calls.ipynb) | Easy | ⬜ | ⬜ |
 |  | [**649.** Dota2 Senate](./07_Queue/649_Dota2_Senate.ipynb) | Med | ⬜ | ⬜ |
 | **Linked List** | [**2095.** Delete the Middle Node of a Linked List](./08_Linked_List/2095_Delete_the_Middle_Node_of_a_Linked_List.ipynb) | Med | ⬜ | ⬜ |
